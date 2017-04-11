@@ -11,6 +11,7 @@ import java.awt.Color;
 
 import entorno.Entorno;
 
+//SE COMENTARON TODOS LOS @Override
 public class EstructuraAgua extends ObjetoGrafico implements Estructura {
 	
 
@@ -26,21 +27,21 @@ public class EstructuraAgua extends ObjetoGrafico implements Estructura {
 		
 	}
 
-	@Override
+	//@Override
 	public void colisionBala(Bala bala, Casilla casilla) 
 	{
 		// no hace nada
 		
 	}
 
-	@Override
+	//@Override
 	public void destruir(Casilla casilla) 
 	{
 		
 		
 	}
 
-	@Override
+	//@Override
 	public void dibujar(Entorno unEntorno, Casilla casilla) {
 		//unEntorno.dibujarRectangulo(casilla.x, casilla.y, 20, 20, 0, Color.BLUE);
 		
