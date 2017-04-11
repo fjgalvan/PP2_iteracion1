@@ -1,7 +1,6 @@
 package com.mycompany.app.estructura;
 
-import com.mycompany.app.modelo.Bala;
-
+import com.mycompany.app.modelo.Bala; 
 import com.mycompany.app.modelo.Casilla;
 import com.mycompany.app.modelo.ObjetoGrafico;
 import com.mycompany.app.modelo.objeto.Coordenada;
@@ -11,7 +10,7 @@ import java.awt.Color;
 
 import entorno.Entorno;
 
-//SE COMENTARON TODOS LOS @Override
+//SE COMENTARON LOS @Override
 public class EstructuraAgua extends ObjetoGrafico implements Estructura {
 	
 

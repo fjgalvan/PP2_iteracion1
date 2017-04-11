@@ -14,7 +14,7 @@ public class ListStructures
 	public ListStructures(GraphicMap map, int length)
 	{
 		this.setLenght(length);
-		this.estructuras = new ArrayList<>();
+		this.estructuras = new ArrayList<ObjetoGrafico>();
 		this.inicializarLista(map);
 	}
 	

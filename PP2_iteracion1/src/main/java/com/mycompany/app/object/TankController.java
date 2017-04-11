@@ -2,8 +2,9 @@ package com.mycompany.app.object;
 
 import java.util.Random;
 
+
 import entorno.Entorno;
-import com.mycompaany.app.enums.Orientation;
+import com.mycompany.app.enums.Orientation;
 
 @SuppressWarnings("unused")
 public class TankController {

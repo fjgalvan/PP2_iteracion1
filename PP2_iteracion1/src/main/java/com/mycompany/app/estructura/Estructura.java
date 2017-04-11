@@ -2,7 +2,6 @@ package com.mycompany.app.estructura;
 
 import java.awt.Color;
 
-
 import entorno.Entorno;
 import com.mycompany.app.modelo.Bala;
 import com.mycompany.app.modelo.Casilla;
@@ -15,4 +14,3 @@ public interface Estructura {
 	public void dibujar(Entorno unEntorno, Casilla casilla);
 	
 }
-

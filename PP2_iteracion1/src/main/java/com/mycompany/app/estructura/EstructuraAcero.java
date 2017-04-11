@@ -2,14 +2,13 @@ package com.mycompany.app.estructura;
 
 import java.awt.Color;
 
-
 import entorno.Entorno;
 import com.mycompany.app.modelo.Bala;
 import com.mycompany.app.modelo.Casilla;
 import com.mycompany.app.modelo.ObjetoGrafico;
 import com.mycompany.app.modelo.objeto.Coordenada;
 
-//SE COMENTARON TODOS LOS @Override
+//SE COMENTARON LOS @Override
 public class EstructuraAcero extends ObjetoGrafico implements Estructura{
 
 	
@@ -46,7 +45,7 @@ public class EstructuraAcero extends ObjetoGrafico implements Estructura{
 		
 	}
 
-	//@Override
+	@Override
 	public void dibujar(Entorno ent, Coordenada c) {
 		// TODO Auto-generated method stub
 		ent.dibujarRectangulo(c.getX(), c.getY(), 20, 20, 0, Color.GREEN);
