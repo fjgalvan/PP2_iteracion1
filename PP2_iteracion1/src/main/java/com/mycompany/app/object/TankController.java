@@ -12,7 +12,7 @@ import com.mycompany.app.util.Util;
 @SuppressWarnings("unused")
 public class TankController {
 	private Tank tank;
-	
+	/**/public Sonido sonido;
 	
 	public TankController(Tank tank){
 		this.tank = tank;
@@ -50,7 +50,7 @@ public class TankController {
 		if(ent.estaPresionada(ent.TECLA_IZQUIERDA))
 			ControlLeft();		
 		if(ent.estaPresionada(ent.TECLA_ENTER)){
-			Sonido.TanqueDisparo.play();
+			/**/Sonido.TanqueDisparo.play();
 			this.tank.disparar();
 		}
 	}
