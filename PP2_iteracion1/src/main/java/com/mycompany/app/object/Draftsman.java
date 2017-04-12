@@ -1,7 +1,6 @@
 package com.mycompany.app.object;
 
-import java.awt.Color;
-
+import java.awt.Color; 
 import entorno.*;
 import com.mycompany.app.modelo.ObjetoGrafico;
 
@@ -49,5 +48,14 @@ public class Draftsman {
 	public void dibujarEstructura(ObjetoGrafico e)
 	{
 		this.entorno.dibujarRectangulo(e.getCoordenada().getX()+(e.getTamaño().getAncho()/2),e.getCoordenada().getY()+e.getTamaño().getAlto()/2, e.getTamaño().getAncho(), e.getTamaño().getAlto(), 0, e.getColor());
+	}
+	public void dibujarTank(Tank t)
+	{
+		this.entorno.dibujarRectangulo(t.getCoordinate().getX()+(t.getSize().getAncho()/2),t.getCoordinate().getY()+t.getSize().getAlto()/2,t.getSize().getAncho(),t.getSize().getAlto(),t.getAngulo(), Color.green);
+		this.entorno.dibujarImagen(Herramientas.cargarImagen("imagen/Tank1.png"), t.getCoordinate().getX()+(t.getSize().getAncho()/2), t.getCoordinate().getY()+t.getSize().getAlto()/2, t.getAngulo());
+		//	this.entorno.dibujarRectangulo(x, y, ancho, alto, angulo, color);
+	}
+	public Entorno getEntorno(){
+		return this.entorno;
 	}
 }

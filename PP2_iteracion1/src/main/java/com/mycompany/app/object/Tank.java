@@ -1,22 +1,25 @@
 package com.mycompany.app.object;
 
+import entorno.Entorno;
 import com.mycompany.app.enums.Orientation;
-
 import com.mycompany.app.enums.TankShot;
+import com.mycompany.app.modelo.ObjetoGrafico;
+import com.mycompany.app.modelo.objeto.Coordenada;
 import com.mycompany.app.util.Util;
 
-public class Tank {
+public class Tank extends ObjetoGrafico {
 	private Orientation orientation;
 	private TankShot tankShot;
 	private Coordinate coordinate;
 	private Size size;
 	private Bullet bullet;
-	private double velocidadDeMovimiento = 2;
+	private double velocidadDeMovimiento = 5;
 	
 	public Tank(Orientation orientation, Coordinate coordinate,	Size size){
 		this.orientation = orientation;
 		this.coordinate = coordinate;
 		this.size = size;
+		this.tankShot = TankShot.NO_EXISTS;
 	}
 
 	//dependiendo del estado en que se encuentre se gira
@@ -30,32 +33,32 @@ public class Tank {
 	public void moverseArriba()
 	{
 		if(getOrientation().equals(Orientation.UP))
-			this.coordinate.setY(this.coordinate.getY()+5);
+			this.coordinate.setY(this.coordinate.getY()-this.velocidadDeMovimiento);
 		this.girar(Orientation.UP);			
 	}
 	public void moverseAbajo()
 	{
 		if(getOrientation().equals(Orientation.DOWN))
-			this.coordinate.setY(this.coordinate.getY()-5);
+			this.coordinate.setY(this.coordinate.getY()+this.velocidadDeMovimiento);
 		this.girar(Orientation.DOWN);			
 	}
 	public void moverseDerecha()
 	{
 		if(getOrientation().equals(Orientation.RIGTH))
-			this.coordinate.setX(this.coordinate.getX()+5);
+			this.coordinate.setX(this.coordinate.getX()+this.velocidadDeMovimiento);
 		this.girar(Orientation.RIGTH);			
 	}
 	public void moverseIzquierda()
 	{
 		if(getOrientation().equals(Orientation.LEFT))
-			this.coordinate.setX(this.coordinate.getX()-5);
+			this.coordinate.setX(this.coordinate.getX()-this.velocidadDeMovimiento);
 		this.girar(Orientation.LEFT);			
 	}
 	
 	public void disparar(){
 		if(tankShot.equals(TankShot.NO_EXISTS)){
 			bullet = new Bullet(orientation, 
-					new Coordinate(this.coordinate.getX(),this.coordinate.getY()),
+					new Coordinate(this.coordinate.getX()+20,this.coordinate.getY()+20),
 					new Size(10, 10));
 			tankShot = TankShot.EXISTS;
 		}
@@ -68,15 +71,16 @@ public class Tank {
 			Util.moverse(orientation, coordinate, velocidadDeMovimiento);
 		}
 	}
+	
 	public double getAngulo() {
 		if(this.orientation.equals(Orientation.UP)){
-			return Math.PI*1.5;
-		}if(this.orientation.equals(Orientation.DOWN)){
-			return Math.PI/2;
-		}if(this.orientation.equals(Orientation.LEFT)){
-			return Math.PI;
-		}if(this.orientation.equals(Orientation.RIGTH)){
 			return 0;
+		}if(this.orientation.equals(Orientation.DOWN)){
+			return Math.PI;
+		}if(this.orientation.equals(Orientation.LEFT)){
+			return Math.PI*1.5;
+		}if(this.orientation.equals(Orientation.RIGTH)){
+			return Math.PI/2;
 		}
 	return 0;
 	}
@@ -119,5 +123,11 @@ public class Tank {
 
 	public void setBullet(Bullet bullet) {
 		this.bullet = bullet;
+	}
+
+	@Override
+	public void dibujar(Entorno ent, Coordenada c) {
+		// TODO Auto-generated method stub
+		
 	}
 }
