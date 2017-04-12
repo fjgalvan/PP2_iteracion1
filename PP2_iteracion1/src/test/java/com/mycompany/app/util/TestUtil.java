@@ -27,7 +27,7 @@ public class TestUtil {
 	@Test
 	public void testEstaEnElLimiteDeTableroPorDerecha() {
 		Orientation orientation = Orientation.RIGTH;
-		Coordinate coordinate = new Coordinate(780, 50);
+		Coordinate coordinate = new Coordinate(980, 50);
 		assertTrue(Util.estaEnElLimiteDeTablero(orientation, coordinate));
 	}
 	
