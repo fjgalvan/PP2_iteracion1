@@ -3,7 +3,6 @@ package com.mycompany.app.object;
 import java.util.*;
 import com.mycompany.app.estructura.*;
 import com.mycompany.app.modelo.ObjetoGrafico;
-import com.mycompany.app.modelo.objeto.Tamaño;
 
 public class ListStructures 
 {
@@ -35,10 +34,8 @@ public class ListStructures
 			List<Coordinate> lista = mapa.listaCoordenadas();
 			int pos = ale.nextInt(lista.size());
 			Coordinate azar = mapa.getCoordenada(pos);
-//			System.out.println(azar);
-			//Coordinate azar = new Coordinate(20, 20);
 			o.setCoordenada(azar);
-			o.setTamaño(new Tamaño(40,40));
+			o.setSize(new Size(40,40));
 			lista.remove(pos);
 		}
 	}

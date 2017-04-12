@@ -2,12 +2,7 @@ package com.mycompany.app.estructura;
 
 import java.awt.Color;
 
-import entorno.Entorno;
-import com.mycompany.app.modelo.Bala;
-import com.mycompany.app.modelo.Casilla;
 import com.mycompany.app.modelo.ObjetoGrafico;
-import com.mycompany.app.modelo.objeto.Coordenada;
-import com.mycompany.app.modelo.objeto.Imagen;
 
 //SE COMENTARON LOS @Override
 public class EstructuraLadrillo extends ObjetoGrafico implements Estructura{
@@ -19,30 +14,17 @@ public class EstructuraLadrillo extends ObjetoGrafico implements Estructura{
 		//System.out.println("me construi estructura ladrillo");
 		this.color = Color.RED;
 	}
-		
-	//@Override
-	public void colisionBala(Bala bala, Casilla casilla) {
-		//bala.destruir();
-		this.destruir(casilla);
-	}
 
-	//@Override
-	public void destruir(Casilla casilla) {
-		casilla.liberarCasilla();
-	}
-
-	//@Override
-	public void dibujar(Entorno unEntorno, Casilla casilla) {
-		//unEntorno.dibujarRectangulo(casilla.x, Casilla.y, 20, 20, 0, Color.RED);
-		
-	}
-
-	@Override
-	public void dibujar(Entorno ent, Coordenada c) {
+	public void colisionBala() {
 		// TODO Auto-generated method stub
-		ent.dibujarRectangulo(c.getX(), c.getY(), 20, 20, 0, Color.YELLOW);
+		
 	}
 
+	public void destruir() {
+		// TODO Auto-generated method stub
+		
+	}
+		
 	
 	
 }

@@ -2,7 +2,6 @@ package com.mycompany.app.main;
 
 import entorno.*;
 import com.mycompany.app.enums.Orientation;
-import com.mycompany.app.modelo.ObjetoGrafico;
 import com.mycompany.app.object.*;
 
 public class Game extends InterfaceJuego {
@@ -14,7 +13,6 @@ public class Game extends InterfaceJuego {
 	private ListStructures estructuras;
 	private TankController tControl;
      
-	
 	public Game() 
 	{
 		this.mapa = new GraphicMap(new Size(1000, 600), new Size(20, 20));
@@ -29,10 +27,10 @@ public class Game extends InterfaceJuego {
     	    	
     	this.dibujador.dibujarMarco(mapa); 
 
-    	for (ObjetoGrafico e:estructuras.getLista()) 
+    	/*for (ObjetoGrafico e:estructuras.getLista()) 
     	{
 			this.dibujador.dibujarEstructura(e);
-		}
+		}*/
     	
     	this.dibujador.dibujarTank(tank);
     	this.tControl.ControlTank(dibujador.getEntorno());

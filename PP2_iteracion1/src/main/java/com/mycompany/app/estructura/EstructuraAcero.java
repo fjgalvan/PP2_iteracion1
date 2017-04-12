@@ -2,11 +2,7 @@ package com.mycompany.app.estructura;
 
 import java.awt.Color;
 
-import entorno.Entorno;
-import com.mycompany.app.modelo.Bala;
-import com.mycompany.app.modelo.Casilla;
 import com.mycompany.app.modelo.ObjetoGrafico;
-import com.mycompany.app.modelo.objeto.Coordenada;
 
 //SE COMENTARON LOS @Override
 public class EstructuraAcero extends ObjetoGrafico implements Estructura{
@@ -24,30 +20,10 @@ public class EstructuraAcero extends ObjetoGrafico implements Estructura{
 
 	}
 
-	//@Override
-	public void colisionBala(Bala bala, Casilla casilla) 
-	{
-		//bala.destruir();
+	public void destruir() {
+		// TODO Auto-generated method stub
 		
 	}
 
 	
-	//@Override
-	public void destruir(Casilla casilla) 
-	{
-		casilla.liberarCasilla();
-		
-	}
-
-	//@Override
-	public void dibujar(Entorno unEntorno, Casilla casilla) {
-		//unEntorno.dibujarRectangulo(casilla.x, casilla.y, 20, 20, 0, Color.GRAY);
-		
-	}
-
-	@Override
-	public void dibujar(Entorno ent, Coordenada c) {
-		// TODO Auto-generated method stub
-		ent.dibujarRectangulo(c.getX(), c.getY(), 20, 20, 0, Color.GREEN);
-	}
 }

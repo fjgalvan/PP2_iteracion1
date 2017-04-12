@@ -2,16 +2,13 @@ package com.mycompany.app.modelo;
 
 import java.awt.Color;
 
-
-import entorno.Entorno;
-import com.mycompany.app.modelo.objeto.*;
 import com.mycompany.app.object.Coordinate;
+import com.mycompany.app.object.Size;
 
 public abstract class ObjetoGrafico {
 	
-	protected Coordinate coordenada;
-	protected Tamaño tamaño;
-	protected Imagen imagen;
+	protected Coordinate coordinate;
+	protected Size size;
 	protected Color color;
 	
 	public ObjetoGrafico()
@@ -20,40 +17,32 @@ public abstract class ObjetoGrafico {
 	}
 	//public abstract void dibujar(Entorno ent);
 
-	public abstract void dibujar(Entorno ent, Coordenada c);
+	//public abstract void dibujar(Entorno ent, Coordenada c);
 	
+	
+
+
+	public Color getColor() {
+		return color;
+	}
+
 	public Coordinate getCoordenada() 
 	{
-		return coordenada;
+		return coordinate;
 	}
 
 	public void setCoordenada(Coordinate coordenada) 
 	{
-		this.coordenada = coordenada;
+		this.coordinate = coordenada;
 	}
 
-	public Imagen getImagen() 
+	public Size getSize() 
 	{
-		return imagen;
+		return size;
 	}
 
-	public void setImagen(Imagen imagen) 
-	{
-		this.imagen = imagen;
-	}	
-	
-	public Tamaño getTamaño()
-	{
-		return this.tamaño;
-	}
-	
-	public void setTamaño(Tamaño t)
-	{
-		this.tamaño = t ;
-	}
-
-	public Color getColor() {
-		return color;
+	public void setSize(Size size) {
+		this.size = size;
 	}
 
 	public void setColor(Color color) {

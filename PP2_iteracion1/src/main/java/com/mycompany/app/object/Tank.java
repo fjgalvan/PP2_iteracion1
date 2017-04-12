@@ -1,19 +1,15 @@
 package com.mycompany.app.object;
 
-import entorno.Entorno;
 import com.mycompany.app.enums.Orientation;
 import com.mycompany.app.enums.TankShot;
 import com.mycompany.app.modelo.ObjetoGrafico;
-import com.mycompany.app.modelo.objeto.Coordenada;
 import com.mycompany.app.util.Util;
 
 public class Tank extends ObjetoGrafico {
 	private Orientation orientation;
 	private TankShot tankShot;
-	private Coordinate coordinate;
-	private Size size;
 	private Bullet bullet;
-	private double velocidadDeMovimiento = 5;
+	private double velocidadDeMovimiento = 3;
 	
 	public Tank(Orientation orientation, Coordinate coordinate,	Size size){
 		this.orientation = orientation;
@@ -125,9 +121,5 @@ public class Tank extends ObjetoGrafico {
 		this.bullet = bullet;
 	}
 
-	@Override
-	public void dibujar(Entorno ent, Coordenada c) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

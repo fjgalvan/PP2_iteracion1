@@ -26,7 +26,7 @@ public class TestBullet {
 		assertTrue(Util.estaEnElLimiteDeTablero(orientation3, coordinate3));
 		
 		Orientation orientation4 = Orientation.RIGTH;
-		Coordinate coordinate4 = new Coordinate(779, 50);
+		Coordinate coordinate4 = new Coordinate(979, 50);
 		assertFalse(Util.estaEnElLimiteDeTablero(orientation4, coordinate4));
 		
 		Orientation orientation5 = Orientation.UP;

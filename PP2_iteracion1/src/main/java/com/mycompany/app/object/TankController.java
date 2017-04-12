@@ -26,12 +26,12 @@ public class TankController {
 	}
 	public void ControlDown()
 	{
-		if(tank.getCoordinate().getY() <= 540)
+		if(tank.getCoordinate().getY() <= 547)
 		tank.moverseAbajo();
 	}
 	public void ControlRigth()
 	{
-		if(tank.getCoordinate().getX() <= 940 )
+		if(tank.getCoordinate().getX() <= 946 )
 		tank.moverseDerecha();
 	}
 	public void ControlLeft()
@@ -85,8 +85,8 @@ public class TankController {
 	public void control_bullet(Entorno entorno){
 		if(this.tank.getTankBullet().equals(TankShot.EXISTS)){
 			this.tank.getBullet().avanzarBullet();
-			entorno.dibujarCirculo(this.tank.getBullet().getCoordinate().getX(), 
-					this.tank.getBullet().getCoordinate().getY(), 10, Color.gray);
+			/*entorno.dibujarCirculo(this.tank.getBullet().getCoordinate().getX(), 
+					this.tank.getBullet().getCoordinate().getY(), 10, Color.gray);*/
 			entorno.dibujarImagen(Herramientas.cargarImagen("imagen/bala.png"), this.tank.getBullet().getCoordinate().getX(), 
 					this.tank.getBullet().getCoordinate().getY(), 0);
 			if(this.tank.getBullet().colisionBullet()){
