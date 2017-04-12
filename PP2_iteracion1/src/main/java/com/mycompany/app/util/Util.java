@@ -13,7 +13,7 @@ public class Util {
 		public static boolean estaEnElLimiteDeTablero(Orientation orientation, Coordinate coordinate){ //,Posicion posicion
 			if( orientation.equals(Orientation.LEFT) && coordinate.getX() <= 30){
 				return  true; //izquierda
-			}if(orientation.equals(Orientation.RIGTH) && coordinate.getX() >= 780){
+			}if(orientation.equals(Orientation.RIGTH) && coordinate.getX() >= 980){
 				return true; //derecha 
 			}if(orientation.equals(Orientation.UP) && coordinate.getY() <= 30){
 				return true;//arriba 
