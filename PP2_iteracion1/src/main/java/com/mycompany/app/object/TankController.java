@@ -12,7 +12,7 @@ import com.mycompany.app.util.Util;
 @SuppressWarnings("unused")
 public class TankController {
 	private Tank tank;
-	/**/public Sonido sonido;
+	
 	
 	public TankController(Tank tank){
 		this.tank = tank;
