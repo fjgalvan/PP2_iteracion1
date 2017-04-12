@@ -1,9 +1,10 @@
 package com.mycompany.app.object;
 
-import java.awt.Color; 
+import java.awt.Color;
 import java.util.Random;
 
 import entorno.Entorno;
+import entorno.Herramientas;
 import com.mycompany.app.enums.Orientation;
 import com.mycompany.app.enums.TankShot;
 import sonido.Sonido;
@@ -50,7 +51,8 @@ public class TankController {
 		if(ent.estaPresionada(ent.TECLA_IZQUIERDA))
 			ControlLeft();		
 		if(ent.estaPresionada(ent.TECLA_ENTER)){
-			/**/Sonido.TanqueDisparo.play();
+			Sonido.TanqueDisparo.stop();
+			Sonido.TanqueDisparo.play();
 			this.tank.disparar();
 		}
 	}
@@ -85,10 +87,20 @@ public class TankController {
 			this.tank.getBullet().avanzarBullet();
 			entorno.dibujarCirculo(this.tank.getBullet().getCoordinate().getX(), 
 					this.tank.getBullet().getCoordinate().getY(), 10, Color.gray);
+			entorno.dibujarImagen(Herramientas.cargarImagen("imagen/bala.png"), this.tank.getBullet().getCoordinate().getX(), 
+					this.tank.getBullet().getCoordinate().getY(), 0);
 			if(this.tank.getBullet().colisionBullet()){
 				this.tank.setTankBullet(TankShot.NO_EXISTS);
 				this.tank.setBullet(null);
 			}
 		}
+	}
+
+	public Tank getTank() {
+		return tank;
+	}
+
+	public void setTank(Tank tank) {
+		this.tank = tank;
 	}
 }
