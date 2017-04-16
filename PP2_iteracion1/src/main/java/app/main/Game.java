@@ -10,6 +10,7 @@ public class Game extends InterfaceJuego {
 	//private Image fondo = Herramientas.cargarImagen("imagen/fondo.jpg");
     private Draftsman dibujador;
     private GraphicMap mapa;
+	@SuppressWarnings("unused")
 	private ListStructures estructuras;
 	private TankController tControl;
     /**/private Tank enemyTank;
@@ -24,9 +25,12 @@ public class Game extends InterfaceJuego {
 		this.tControl = new TankController(tank);
 		/**/this.enemyTank = new Tank(Orientation.UP,new Coordinate(600,100),new Size(40,40));
 		/**/this.enemyTankControl= new EnemyTankController(enemyTank);
+		
 	}
 	
-    public void tick() 
+    
+
+	public void tick() 
     {
     	    	
     	this.dibujador.dibujarMarco(mapa); 

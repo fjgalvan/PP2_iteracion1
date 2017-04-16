@@ -1,14 +1,15 @@
 package app.object;
 
-import java.awt.Color; 
+//import java.awt.Color;  
 import java.util.Random;
 
 import entorno.Entorno;
 import entorno.Herramientas;
 import app.enums.Orientation;
 import app.enums.TankShot;
-import app.util.Util;
-import sonido.Sonido;
+//import app.main.Game;
+//import app.util.Util;
+//import sonido.Sonido;
 
 
 public class EnemyTankController {
@@ -49,6 +50,7 @@ public class EnemyTankController {
 		controlChoqueDerechaMap();
 		controlChoqueAbajoMap();
 		controlChoqueIzquierdaMap();
+		controlDisparoTankEnemy(ent); // FALTARIA UN TEMPORIZADOR PARA QUE NO DISPARE A PENAS bullet==null
 	}
 	public void controChoqueArribaMap(){
 		if(enemyTank.getOrientation().equals(Orientation.UP)){
@@ -80,6 +82,12 @@ public class EnemyTankController {
 			if(enemyTank.getCoordinate().getX()==27){
 				enemyTank.girar(Orientation.UP);
 			}
+		}
+	}
+	public void controlDisparoTankEnemy(Entorno ent){
+		control_bullet(ent);
+		if(this.enemyTank.getTankBullet().equals(TankShot.NO_EXISTS)){
+			enemyTank.disparar();
 		}
 	}
 	
